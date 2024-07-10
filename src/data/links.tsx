@@ -75,8 +75,14 @@ export const dataSocialLink = [
 
 export const dataMenuLink = [
   {
-    name: "Meme Token",
+    name: "Home",
     link: "/",
+    isDisable: false,
+    path: "#home",
+  },
+  {
+    name: "Meme Token",
+    link: "/memetoken",
     isDisable: false,
     path: "#memetoken",
   },

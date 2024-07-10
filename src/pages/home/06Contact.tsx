@@ -7,7 +7,7 @@ const Contact = () => {
     <StyledComponent id="contact">
       <BackImage01>
         <img
-          src="/assets/images/backgrounds/chad_gradient01.png"
+          src="/assets/images/backgrounds/chad_main01.png"
           width={"100%"}
           alt=""
         />
@@ -19,7 +19,7 @@ const Contact = () => {
           style={{
             textDecoration: "underline",
             cursor: "pointer",
-            color: "#6E6E6E",
+            // color: "#6E6E6E",
           }}
           onClick={() => {}}
         >
@@ -107,27 +107,25 @@ const SectionSocial = styled(Box)`
 
 const BackImage01 = styled(Box)`
   position: absolute;
-  width: 900px;
-  bottom: -130px;
+  width: 650px;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0.3;
   z-index: -1;
 
   @media (max-width: 1280px) {
-    width: 800px;
-    bottom: -110px;
+    width: 550px;
+    bottom: -30px;
   }
   @media (max-width: 1024px) {
-    width: 650px;
-    bottom: -100px;
+    width: 450px;
+    bottom: -30px;
   }
-  @media (max-width: 768px) {
-    width: 600px;
-    bottom: -90px;
-  }
+
   @media (max-width: 600px) {
-    width: 500px;
-    bottom: -80px;
+    width: 350px;
+    bottom:-30px;
   }
 `;
 

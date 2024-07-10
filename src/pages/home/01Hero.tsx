@@ -10,9 +10,11 @@ const Hero = () => {
     <StyledComponent id="#home">
       <SectionLeft>
         <TextHiChad>
-          Hi, I'm
+          Hi, ...
           <br />
-          TapTapChad.
+          by
+          <br />
+          Become a real chad
         </TextHiChad>
         <TextBody>
           Listen, you will need to tap on your phone screen to become a better
@@ -48,33 +50,67 @@ const Hero = () => {
 
 const StyledComponent = styled(Box)`
   display: flex;
+  position: relative;
   align-items: center;
   width: 100%;
-  margin-top: 50px;
+  padding: 100px 200px;
+  box-sizing: border-box;
+  @media (max-width: 1440px) {
+    padding: 80px 150px;
+  }
+  @media (max-width: 1280px) {
+    padding: 50px 50px;
+  }
   @media (max-width: 1024px) {
-    margin-top: 30px;
+    padding: 30px 50px;
   }
   @media (max-width: 768px) {
+    margin-top: 30px;
+    padding: 0px 30px;
+  }
+  @media (max-width: 600px) {
+    margin-top: 20px;
+    padding: 0px 20px;
+  }
+
+  @media (max-width: 768px) {
     flex-direction: column;
-    margin-top: 10px;
   }
 `;
 
 const SectionLeft = styled(Box)`
   display: flex;
-  flex: 1;
-  width: 100%;
+  width: 60%;
   flex-direction: column;
   justify-content: flex-start;
+  @media (max-width: 1280px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const SectionRight = styled(Box)`
   display: flex;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
   width: 800px;
+  @media (max-width: 1620px) {
+    width: 700px;
+  }
+  @media (max-width: 1440px) {
+    width: 600px;
+  }
+  @media (max-width: 1024px) {
+    width: 500px;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 50px;
+    position: relative;
   }
   @media (max-width: 600px) {
     margin-top: 30px;
@@ -84,7 +120,8 @@ const SectionRight = styled(Box)`
 const TextHiChad = styled(Box)`
   font-family: "Paytone One";
   color: black;
-  font-size: 75px;
+  font-size: 70px;
+  line-height: 100%;
   @media (max-width: 1440px) {
     font-size: 50px;
   }
@@ -92,10 +129,10 @@ const TextHiChad = styled(Box)`
     font-size: 40px;
   }
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: 40px;
   }
   @media (max-width: 600px) {
-    font-size: 25px;
+    font-size: 30px;
   }
 `;
 
@@ -173,10 +210,13 @@ const ButtonYes = styled(Box)`
     width: 100%;
     height: 50px;
     font-size: 18px;
+    border-radius: 6px;
+    margin-right: 20px;
   }
   @media (max-width: 600px) {
     height: 40px;
     font-size: 16px;
+    margin-right: 15px;
   }
 `;
 
@@ -212,6 +252,7 @@ const ButtonMoreInfo = styled(Box)`
     width: 100%;
     height: 45px;
     font-size: 18px;
+    border-radius: 6px;
   }
   @media (max-width: 600px) {
     height: 40px;

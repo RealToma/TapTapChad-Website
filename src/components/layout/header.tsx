@@ -177,12 +177,17 @@ const LinkEach = styled(Box)`
     width: 100%;
   }
 
-  @media (max-width: 1440px) {
+  @media (max-width: 1600px) {
     font-size: 18px;
     margin: 0px 20px;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 1440px) {
     margin: 0px 15px;
+    font-size: 17px;
+  }
+  
+  @media (max-width: 1280px) {
+    margin: 0px 12px;
     font-size: 16px;
   }
 `;
@@ -269,6 +274,7 @@ const LinkMobile = styled(Box)`
   display: flex;
   margin-bottom: 20px;
   font-size: 24px;
+  font-weight: bold;
   color: black;
   font-family: Karma;
 `;
@@ -287,9 +293,13 @@ const SectionMobileFooter = styled(Box)`
 const TextReserved = styled(Box)`
   display: flex;
   margin-top: 20px;
-  color: #eeeeee70;
+  color: black;
   font-size: 14px;
-  font-family: Belleza;
+  font-weight: bold;
+  font-family: Karma;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 export default Header;

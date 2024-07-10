@@ -36,7 +36,7 @@ const ButtonSocial = styled(Box)`
   width: 40px;
   aspect-ratio: 1;
   border-radius: 100%;
-  border: 1px solid black;
+  border: 2px solid black;
   color: white;
   font-size: 20px;
   background-color: black;
@@ -59,5 +59,6 @@ const ButtonSocial = styled(Box)`
     margin: 0px 5px;
     width: 35px;
     font-size: 15px;
+    border: 1px solid black;
   }
 `;
