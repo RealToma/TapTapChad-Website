@@ -9,8 +9,8 @@ const Layout = ({ children }: any) => {
       <BackImage></BackImage>
       <InsideComponent>
         <Header />
-        <Content>{children}</Content>
-        <Footer />
+        {/* <Content>{children}</Content> */}
+        {/* <Footer /> */}
       </InsideComponent>
     </StyledComponent>
   );

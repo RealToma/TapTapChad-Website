@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import styled from "styled-components";
 
-const About = () => {
+const TapTapChad = () => {
   return (
     <StyledComponent id="about">
       <SectionLeft>
@@ -150,4 +150,4 @@ const ButtonBuy = styled(Box)`
   }
 `;
 
-export default About;
+export default TapTapChad;

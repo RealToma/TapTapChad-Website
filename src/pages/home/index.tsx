@@ -1,18 +1,18 @@
 import { Box } from "@mui/material";
 import styled from "styled-components";
-import Hero from "./01Hero";
 import BorderSection from "../../components/border/borderSection";
-import About from "./02About";
-import Gallery from "./03Gallery";
-import Tokenomics from "./04Tokenomics";
-import ContactUs from "./05ContactUs";
+import Hero from "./01Hero";
+import TapTapChad from "./02TapTapChad";
+import Gallery from "./04Press";
+import Tokenomics from "./03Tokenomics";
+import ContactUs from "./05Contact";
 
 const Home = () => {
   return (
     <StyledComponent>
       <Hero />
       <BorderSection />
-      <About />
+      <TapTapChad />
       <BorderSection />
       <Gallery />
       <BorderSection />

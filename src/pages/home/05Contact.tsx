@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import styled from "styled-components";
 import { SocialIconGroup } from "../../components/icons/socialIconGroup";
 
-const ContactUs = () => {
+const Contact = () => {
   return (
     <StyledComponent id='contactus'>
       <TextHead>Contact Us</TextHead>
@@ -74,4 +74,4 @@ const SectionSocial = styled(Box)`
   }
 `;
 
-export default ContactUs;
+export default Contact;
