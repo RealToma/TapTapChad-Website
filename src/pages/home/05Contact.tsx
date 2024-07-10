@@ -4,7 +4,7 @@ import { SocialIconGroup } from "../../components/icons/socialIconGroup";
 
 const Contact = () => {
   return (
-    <StyledComponent id="contactus">
+    <StyledComponent id="contact">
       <BackImage01>
         <img
           src="/assets/images/backgrounds/chad_gradient01.png"

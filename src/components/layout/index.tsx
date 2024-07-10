@@ -55,10 +55,10 @@ const Content = styled(Box)`
     padding: 25px 50px;
   }
   @media (max-width: 768px) {
-    padding: 20px 50px;
+    padding: 20px 30px;
   }
   @media (max-width: 600px) {
-    padding: 20px 30px;
+    padding: 20px 20px;
   }
 `;
 

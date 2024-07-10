@@ -3,37 +3,41 @@ import styled from "styled-components";
 
 const Hero = () => {
   const handleLearnMore = () => {
-    window.open(
-      "https://dexscreener.com/solana/AfUZB4Cvz9aPeAKs1D6qP1WwCcjYKWYaCQpHPu86xCD6"
-    );
+    // window.open("");
   };
 
   return (
     <StyledComponent id="#home">
       <SectionLeft>
-        <TextHead>himistu</TextHead>
-        <TextBody>
-          Who is $HIM? Our animal is a cat. The Cat Is Black. We are $HIM, a
-          community of beasts and people who believe in the next big cultural
-          movement in crypto. Diamond Handz, Balls of Steel, Conviction running
-          in our Veins. We are $HIM, same animal different beasts. Join the
-          culture, buy and hold $HIM. $HIM Culture, $HIM Aesthetics, $HIM Cult.
-          Believe in something. Believe in $HIM.
+        <TextHiChad>
+          Hi, I'm
           <br />
-          You can be $HIM:
-          https://dexscreener.com/solana/AfUZB4Cvz9aPeAKs1D6qP1WwCcjYKWYaCQpHPu86xCD6
+          TapTapChad.
+        </TextHiChad>
+        <TextBody>
+          Listen, you will need to tap on your phone screen to become a better
+          Chad?
         </TextBody>
-        <ButtonBuy
-          onClick={() => {
-            handleLearnMore();
-          }}
-        >
-          Learn More
-        </ButtonBuy>
+        <SectionButtonGroup>
+          <ButtonYes
+            onClick={() => {
+              handleLearnMore();
+            }}
+          >
+            Yes
+          </ButtonYes>
+          <ButtonMoreInfo
+            onClick={() => {
+              handleLearnMore();
+            }}
+          >
+            More Info
+          </ButtonMoreInfo>
+        </SectionButtonGroup>
       </SectionLeft>
       <SectionRight>
         <img
-          src="/assets/images/backgrounds/temp01.png"
+          src="/assets/images/backgrounds/chad_main01.png"
           width={"100%"}
           alt="logo"
         />
@@ -44,15 +48,15 @@ const Hero = () => {
 
 const StyledComponent = styled(Box)`
   display: flex;
+  align-items: center;
   width: 100%;
   margin-top: 50px;
-
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     margin-top: 30px;
   }
-  @media (max-width: 600px) {
-    margin-top: 20px;
+  @media (max-width: 768px) {
     flex-direction: column;
+    margin-top: 10px;
   }
 `;
 
@@ -62,98 +66,156 @@ const SectionLeft = styled(Box)`
   width: 100%;
   flex-direction: column;
   justify-content: flex-start;
-  margin-right: 100px;
-  @media (max-width: 1440px) {
-    margin-right: 50px;
-  }
-  @media (max-width: 1024px) {
-    margin-right: 30px;
-  }
 `;
 
 const SectionRight = styled(Box)`
   display: flex;
-  width: 600px;
+  width: 800px;
 
-  @media (max-width: 1440px) {
-    width: 500px;
-  }
-  @media (max-width: 1024px) {
-    width: 400px;
-  }
   @media (max-width: 768px) {
-    width: 300px;
+    width: 100%;
+    margin-top: 50px;
   }
   @media (max-width: 600px) {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1;
     margin-top: 30px;
   }
 `;
 
-const TextHead = styled(Box)`
-  font-family: Belleza;
-  color: white;
-  font-size: 60px;
-  @media (max-width: 1024px) {
+const TextHiChad = styled(Box)`
+  font-family: "Paytone One";
+  color: black;
+  font-size: 75px;
+  @media (max-width: 1440px) {
     font-size: 50px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     font-size: 40px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     font-size: 30px;
+  }
+  @media (max-width: 600px) {
+    font-size: 25px;
   }
 `;
 
 const TextBody = styled(Box)`
-  font-family: Belleza;
-  word-break: break-all;
-  color: white;
-  font-size: 18px;
-  line-height: 24px;
+  font-family: Karma;
+  /* word-break: break-all; */
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
 
   margin-top: 50px;
-
+  @media (max-width: 1440px) {
+    margin-top: 30px;
+    font-size: 24px;
+  }
   @media (max-width: 1024px) {
     margin-top: 30px;
-    font-size: 16px;
+    font-size: 20px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    font-size: 18px;
   }
   @media (max-width: 600px) {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 16px;
   }
 `;
 
-const ButtonBuy = styled(Box)`
+const SectionButtonGroup = styled(Box)`
   display: flex;
-  width: 130px;
-  height: 45px;
-  font-family: Belleza;
+  align-items: center;
+  margin-top: 50px;
+  @media (max-width: 1024px) {
+    margin-top: 30px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 20px;
+  }
+`;
+
+const ButtonYes = styled(Box)`
+  display: flex;
+  width: 200px;
+  height: 55px;
+  font-family: "Paytone One";
+  font-weight: bold;
+  font-size: 24px;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   user-select: none;
-  border: 1px solid white;
-  background-color: white;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
   /* clip-path: polygon(90% 0, 100% 25%, 100% 100%, 10% 100%, 0% 75%, 0 0); */
-  margin-top: 50px;
+  margin-right: 30px;
+
   transition: 0.3s;
   &:hover {
-    color: white;
+    color: black;
+    background: white;
+  }
+
+  @media (max-width: 1024px) {
+    width: 150px;
+    height: 45px;
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  @media (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
+  @media (max-width: 600px) {
+    height: 40px;
+    font-size: 16px;
+  }
+`;
+
+const ButtonMoreInfo = styled(Box)`
+  display: flex;
+  width: 200px;
+  height: 55px;
+  font-family: "Paytone One";
+  font-weight: bold;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #d5d5d5;
+  color: black;
+  background-color: #d5d5d5;
+  /* clip-path: polygon(90% 0, 100% 25%, 100% 100%, 10% 100%, 0% 75%, 0 0); */
+  transition: 0.3s;
+  &:hover {
+    color: #d5d5d5;
     background: black;
   }
 
   @media (max-width: 1024px) {
-    margin-top: 30px;
-    width: 120px;
-    height: 40px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+  @media (max-width: 768px) {
+    flex: 1;
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
   }
   @media (max-width: 600px) {
-    width: 100px;
-    height: 35px;
+    height: 40px;
+    font-size: 16px;
   }
 `;
 
