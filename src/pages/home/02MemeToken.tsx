@@ -60,6 +60,12 @@ const SectionEachToken = styled(Box)`
   background: #d5d5d5;
   padding: 15px 0px;
 
+  cursor: pointer;
+  transition: .3s;
+  &:hover{
+    transform: scale(1.1);
+  }
+
   @media (max-width: 1024px) {
     padding: 10px 0px;
   }

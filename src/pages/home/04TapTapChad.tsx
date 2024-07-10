@@ -1,39 +1,38 @@
 import { Box } from "@mui/material";
 import styled from "styled-components";
+import { CustomTextHead01 } from "../../components/text/textHead";
+import { CustomTextBody01 } from "../../components/text/textBody";
 
-const Hero = () => {
+const TapTapChad = () => {
   const handleLearnMore = () => {
     // window.open("");
   };
 
   return (
-    <StyledComponent id="home">
+    <StyledComponent id="taptapchad">
       <SectionLeft>
-        <TextHiChad>Become a real chad</TextHiChad>
-        <TextBody>
-          Listen, you will need to tap on your phone screen to become a better
-          Chad?
-        </TextBody>
+        <CustomTextHead01
+          color={"black"}
+          text="Start Earn $CHAD tokens Today"
+        />
+        <CustomTextBody01
+          color={"black"}
+          text="A unique Tap 2 Earn $CHAD app  Chad Points will be converted automatically into $CHAD token after listing phase, we will  follow a vesting schedule to ensure fairness on trading."
+        />
+
         <SectionButtonGroup>
           <ButtonYes
             onClick={() => {
               handleLearnMore();
             }}
           >
-            Yes
+            Start Earning Now
           </ButtonYes>
-          <ButtonMoreInfo
-            onClick={() => {
-              handleLearnMore();
-            }}
-          >
-            More Info
-          </ButtonMoreInfo>
         </SectionButtonGroup>
       </SectionLeft>
       <SectionRight>
         <img
-          src="/assets/images/backgrounds/chad_main01.png"
+          src="/assets/images/backgrounds/taptapchad01.png"
           width={"100%"}
           alt="logo"
         />
@@ -47,16 +46,16 @@ const StyledComponent = styled(Box)`
   position: relative;
   align-items: center;
   width: 100%;
-  padding: 150px 200px;
+  padding: 250px 200px;
   box-sizing: border-box;
   @media (max-width: 1440px) {
-    padding: 100px 150px;
+    padding: 200px 150px;
   }
   @media (max-width: 1280px) {
-    padding: 80px 50px;
+    padding: 150px 50px;
   }
   @media (max-width: 1024px) {
-    padding: 80px 50px;
+    padding: 100px 50px;
   }
   @media (max-width: 768px) {
     margin-top: 30px;
@@ -74,7 +73,7 @@ const StyledComponent = styled(Box)`
 
 const SectionLeft = styled(Box)`
   display: flex;
-  width: 60%;
+  width: 40%;
   flex-direction: column;
   justify-content: flex-start;
   @media (max-width: 1280px) {
@@ -107,9 +106,9 @@ const SectionRight = styled(Box)`
 
   @media (max-width: 768px) {
     width: 100%;
+    right: 0%;
     margin-top: 50px;
     position: relative;
-    right: 0%;
   }
   @media (max-width: 600px) {
     margin-top: 30px;
@@ -176,7 +175,7 @@ const SectionButtonGroup = styled(Box)`
 
 const ButtonYes = styled(Box)`
   display: flex;
-  width: 200px;
+  width: 270px;
   height: 55px;
   font-family: "Paytone One";
   font-weight: bold;
@@ -199,7 +198,7 @@ const ButtonYes = styled(Box)`
   }
 
   @media (max-width: 1024px) {
-    width: 150px;
+    width: 230px;
     height: 45px;
     font-size: 20px;
     margin-right: 20px;
@@ -259,4 +258,4 @@ const ButtonMoreInfo = styled(Box)`
   }
 `;
 
-export default Hero;
+export default TapTapChad;
