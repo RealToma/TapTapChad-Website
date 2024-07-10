@@ -14,6 +14,7 @@ const Home = () => {
       <Hero />
       <BorderSection />
       <MemeToken />
+      {/* <BorderSection /> */}
       {/* <TapTapChad />
       <BorderSection />
       <Gallery />

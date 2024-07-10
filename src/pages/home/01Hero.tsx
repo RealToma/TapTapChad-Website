@@ -9,13 +9,7 @@ const Hero = () => {
   return (
     <StyledComponent id="#home">
       <SectionLeft>
-        <TextHiChad>
-          Hi, ...
-          <br />
-          by
-          <br />
-          Become a real chad
-        </TextHiChad>
+        <TextHiChad>Become a real chad</TextHiChad>
         <TextBody>
           Listen, you will need to tap on your phone screen to become a better
           Chad?
@@ -53,16 +47,16 @@ const StyledComponent = styled(Box)`
   position: relative;
   align-items: center;
   width: 100%;
-  padding: 100px 200px;
+  padding: 150px 200px;
   box-sizing: border-box;
   @media (max-width: 1440px) {
-    padding: 80px 150px;
+    padding: 100px 150px;
   }
   @media (max-width: 1280px) {
-    padding: 50px 50px;
+    padding: 80px 50px;
   }
   @media (max-width: 1024px) {
-    padding: 30px 50px;
+    padding: 80px 50px;
   }
   @media (max-width: 768px) {
     margin-top: 30px;
@@ -94,7 +88,8 @@ const SectionLeft = styled(Box)`
 const SectionRight = styled(Box)`
   display: flex;
   position: absolute;
-  right: 0px;
+  width: 100%;
+  right: 5%;
   bottom: 0px;
   width: 800px;
   @media (max-width: 1620px) {
@@ -102,6 +97,9 @@ const SectionRight = styled(Box)`
   }
   @media (max-width: 1440px) {
     width: 600px;
+  }
+  @media (max-width: 1280px) {
+    right: -20px;
   }
   @media (max-width: 1024px) {
     width: 500px;
