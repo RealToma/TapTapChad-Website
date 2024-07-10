@@ -9,7 +9,7 @@ const Layout = ({ children }: any) => {
       <InsideComponent>
         <Header />
         {/* <Content>{children}</Content> */}
-        {/* <Footer /> */}
+        <Footer />
       </InsideComponent>
     </StyledComponent>
   );

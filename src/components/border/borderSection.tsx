@@ -12,7 +12,7 @@ const StyledComponent = styled(Box)`
   background: linear-gradient(
     90deg,
     hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 90%, 1) 50%,
+    hsla(0, 0%, 100%, 1) 50%,
     hsla(0, 0%, 0%, 0) 100%
   );
   @media (max-width: 1024px) {
