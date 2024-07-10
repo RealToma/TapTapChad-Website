@@ -76,10 +76,10 @@ const StyledComponent = styled(Box)`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid black;
 
   padding: 30px 200px;
   box-sizing: border-box;
-  border-bottom: 1px solid black;
   @media (max-width: 1440px) {
     padding: 30px 150px;
   }

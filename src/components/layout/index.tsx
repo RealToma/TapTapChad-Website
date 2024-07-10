@@ -8,7 +8,7 @@ const Layout = ({ children }: any) => {
     <StyledComponent>
       <InsideComponent>
         <Header />
-        {/* <Content>{children}</Content> */}
+        <Content>{children}</Content>
         <Footer />
       </InsideComponent>
     </StyledComponent>
@@ -46,19 +46,19 @@ const InsideComponent = styled(Box)`
 const Content = styled(Box)`
   display: flex;
   width: 100%;
-  padding: 0px 200px;
+  padding: 30px 200px;
   box-sizing: border-box;
   @media (max-width: 1440px) {
-    padding: 0px 100px;
+    padding: 30px 150px;
   }
-  @media (max-width: 1024px) {
-    padding: 0px 50px;
+  @media (max-width: 1280px) {
+    padding: 25px 50px;
   }
-  @media (max-width: 700px) {
-    padding: 0px 30px;
+  @media (max-width: 768px) {
+    padding: 20px 50px;
   }
   @media (max-width: 600px) {
-    padding: 0px 20px;
+    padding: 20px 30px;
   }
 `;
 

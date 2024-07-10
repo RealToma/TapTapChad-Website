@@ -5,20 +5,20 @@ import Hero from "./01Hero";
 import TapTapChad from "./02TapTapChad";
 import Gallery from "./04Press";
 import Tokenomics from "./03Tokenomics";
-import ContactUs from "./05Contact";
+import Contact from "./05Contact";
 
 const Home = () => {
   return (
     <StyledComponent>
       <Hero />
       <BorderSection />
-      <TapTapChad />
+      {/* <TapTapChad />
       <BorderSection />
       <Gallery />
       <BorderSection />
-      <Tokenomics />
+      <Tokenomics /> */}
       <BorderSection />
-      <ContactUs />
+      <Contact />
     </StyledComponent>
   );
 };

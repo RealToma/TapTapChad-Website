@@ -4,17 +4,29 @@ import { SocialIconGroup } from "../../components/icons/socialIconGroup";
 
 const Contact = () => {
   return (
-    <StyledComponent id='contactus'>
+    <StyledComponent id="contactus">
+      <BackImage01>
+        <img
+          src="/assets/images/backgrounds/chad_gradient01.png"
+          width={"100%"}
+          alt=""
+        />
+      </BackImage01>
       <TextHead>Contact Us</TextHead>
       <TextBody>
-        Email us at{" "}
+        Email us at&nbsp;&nbsp;
         <span
-          style={{ textDecoration: "underline", cursor: "pointer" }}
+          style={{
+            textDecoration: "underline",
+            cursor: "pointer",
+            color: "#6E6E6E",
+          }}
           onClick={() => {}}
         >
-          support@himitsu
-        </span>{" "}
-        for any queries or support
+          chadceo@taptapchad.com
+        </span>
+        &nbsp;&nbsp; for any <br />
+        queries or support
       </TextBody>
       <SectionSocial>
         <SocialIconGroup />
@@ -25,14 +37,26 @@ const Contact = () => {
 
 const StyledComponent = styled(Box)`
   display: flex;
+  position: relative;
   width: 100%;
   flex-direction: column;
   align-items: center;
+
+  margin-top: 100px;
+  @media (max-width: 1280px) {
+    margin-top: 50px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 70px;
+  }
+  @media (max-width: 600px) {
+    margin-top: 60px;
+  }
 `;
 
 const TextHead = styled(Box)`
-  font-family: Belleza;
-  color: white;
+  font-family: "Paytone One";
+  color: black;
   font-size: 60px;
   @media (max-width: 1024px) {
     font-size: 50px;
@@ -46,10 +70,10 @@ const TextHead = styled(Box)`
 `;
 
 const TextBody = styled(Box)`
-  font-family: Belleza;
-  color: white;
-  font-size: 16px;
-  line-height: 24px;
+  font-family: "Paytone One";
+  color: black;
+  font-size: 18px;
+  text-align: center;
 
   margin-top: 30px;
 
@@ -59,6 +83,10 @@ const TextBody = styled(Box)`
   }
   @media (max-width: 600px) {
     font-size: 12px;
+    margin-top: 10px;
+  }
+  @media (max-width: 350px) {
+    font-size: 10px;
   }
 `;
 
@@ -67,10 +95,39 @@ const SectionSocial = styled(Box)`
   margin: 50px 0px;
 
   @media (max-width: 1024px) {
+    margin: 40px 0px;
+  }
+  @media (max-width: 768px) {
     margin: 30px 0px;
   }
   @media (max-width: 600px) {
     margin: 20px 0px;
+  }
+`;
+
+const BackImage01 = styled(Box)`
+  position: absolute;
+  width: 900px;
+  bottom: -130px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+
+  @media (max-width: 1280px) {
+    width: 800px;
+    bottom: -110px;
+  }
+  @media (max-width: 1024px) {
+    width: 650px;
+    bottom: -100px;
+  }
+  @media (max-width: 768px) {
+    width: 600px;
+    bottom: -90px;
+  }
+  @media (max-width: 600px) {
+    width: 500px;
+    bottom: -80px;
   }
 `;
 

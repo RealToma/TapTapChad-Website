@@ -36,7 +36,7 @@ const ButtonSocial = styled(Box)`
   width: 40px;
   aspect-ratio: 1;
   border-radius: 100%;
-  border: 1px solid white;
+  border: 1px solid black;
   color: white;
   font-size: 20px;
   background-color: black;

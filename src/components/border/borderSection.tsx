@@ -11,9 +11,9 @@ const StyledComponent = styled(Box)`
   margin: 50px 0px;
   background: linear-gradient(
     90deg,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 100%, 1) 50%,
-    hsla(0, 0%, 0%, 0) 100%
+    rgba(212, 212, 212, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(212, 212, 212, 1) 100%
   );
   @media (max-width: 1024px) {
     margin: 30px 0px;
