@@ -6,7 +6,6 @@ import Footer from "./footer";
 const Layout = ({ children }: any) => {
   return (
     <StyledComponent>
-      <BackImage></BackImage>
       <InsideComponent>
         <Header />
         {/* <Content>{children}</Content> */}
@@ -20,7 +19,7 @@ const StyledComponent = styled(Box)`
   display: flex;
   position: relative;
   width: 100%;
-  background-color: black;
+  background-color: white;
   flex-direction: column;
   overflow: hidden;
 `;
