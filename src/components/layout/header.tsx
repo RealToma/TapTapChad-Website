@@ -88,9 +88,9 @@ const StyledComponent = styled(Box)`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  position: fixed;
+  /* position: fixed; */
   background-color: white;
-  z-index: 1000;
+  /* z-index: 1000; */
 
   padding: 30px 200px;
   box-sizing: border-box;
