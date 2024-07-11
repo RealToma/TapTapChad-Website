@@ -3,6 +3,10 @@ import styled from "styled-components";
 import Chart from "react-apexcharts";
 import { CustomTextHead01 } from "../../components/text/textHead";
 import { CustomTextBody01 } from "../../components/text/textBody";
+import { HiClipboard, HiClipboardCheck } from "react-icons/hi";
+import { useState } from "react";
+import copy from "copy-to-clipboard";
+import { addressChadToken } from "../../data/config";
 
 const dataChartTokenomics = {
   series: [35, 25, 15, 25],
@@ -70,6 +74,16 @@ const dataChartTokenomics = {
 };
 
 const Tokenomics = () => {
+  const [flagCopiedAddress, setFlagCopiedAddress] = useState(false);
+
+  const handleCopyAddress = () => {
+    setFlagCopiedAddress(true);
+    copy(addressChadToken);
+    setTimeout(() => {
+      setFlagCopiedAddress(false);
+    }, 1500);
+  };
+
   return (
     <StyledComponent id="tokenomics">
       <SectionChart>
@@ -85,7 +99,14 @@ const Tokenomics = () => {
         <SectionContractAddress>
           <CustomTextBody01 text="CONTACT ADDRESS" color={"black"} />
           <SectionCopyAddress>
-            
+            <TextAddress>{addressChadToken}</TextAddress>
+            <ButtonCopy
+              onClick={() => {
+                handleCopyAddress();
+              }}
+            >
+              {!flagCopiedAddress ? <HiClipboard /> : <HiClipboardCheck />}
+            </ButtonCopy>
           </SectionCopyAddress>
         </SectionContractAddress>
       </SectionTokenomics>
@@ -155,7 +176,8 @@ const SectionContractAddress = styled(Box)`
 `;
 
 const SectionCopyAddress = styled(Box)`
-  width: 100%;
+  display: flex;
+  width: 70%;
   height: 55px;
   border-radius: 5px;
   background: #000;
@@ -164,6 +186,30 @@ const SectionCopyAddress = styled(Box)`
   justify-content: space-between;
   padding: 0px 20px;
   box-sizing: border-box;
+`;
+
+const TextAddress = styled(Box)`
+  display: flex;
+  color: #fff;
+
+  font-family: Karma;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: capitalize;
+`;
+
+const ButtonCopy = styled(Box)`
+  display: flex;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  user-select: none;
+
+  transition: 300ms;
+  &:hover {
+    color: #838383;
+  }
 `;
 
 export default Tokenomics;

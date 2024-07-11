@@ -119,50 +119,6 @@ const SectionRight = styled(Box)`
   }
 `;
 
-const TextHiChad = styled(Box)`
-  font-family: "Paytone One";
-  color: black;
-  font-size: 70px;
-  line-height: 100%;
-  @media (max-width: 1440px) {
-    font-size: 50px;
-  }
-  @media (max-width: 1024px) {
-    font-size: 40px;
-  }
-  @media (max-width: 768px) {
-    font-size: 40px;
-  }
-  @media (max-width: 600px) {
-    font-size: 30px;
-  }
-`;
-
-const TextBody = styled(Box)`
-  font-family: Karma;
-  /* word-break: break-all; */
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-
-  margin-top: 50px;
-  @media (max-width: 1440px) {
-    margin-top: 30px;
-    font-size: 24px;
-  }
-  @media (max-width: 1024px) {
-    margin-top: 30px;
-    font-size: 20px;
-  }
-  @media (max-width: 768px) {
-    margin-top: 20px;
-    font-size: 18px;
-  }
-  @media (max-width: 600px) {
-    margin-top: 10px;
-    font-size: 16px;
-  }
-`;
 
 const SectionButtonGroup = styled(Box)`
   display: flex;
@@ -222,44 +178,5 @@ const ButtonYes = styled(Box)`
   }
 `;
 
-const ButtonMoreInfo = styled(Box)`
-  display: flex;
-  width: 200px;
-  height: 55px;
-  font-family: "Paytone One";
-  font-weight: bold;
-  font-size: 24px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid #d5d5d5;
-  color: black;
-  background-color: #d5d5d5;
-  /* clip-path: polygon(90% 0, 100% 25%, 100% 100%, 10% 100%, 0% 75%, 0 0); */
-  transition: 0.3s;
-  &:hover {
-    color: #d5d5d5;
-    background: black;
-  }
-
-  @media (max-width: 1024px) {
-    width: 150px;
-    height: 50px;
-    font-size: 20px;
-  }
-  @media (max-width: 768px) {
-    flex: 1;
-    width: 100%;
-    height: 45px;
-    font-size: 18px;
-    border-radius: 6px;
-  }
-  @media (max-width: 600px) {
-    height: 40px;
-    font-size: 16px;
-  }
-`;
 
 export default TapTapChad;

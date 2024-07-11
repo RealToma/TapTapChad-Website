@@ -141,6 +141,12 @@ const ButtonSubmit = styled(Box)`
 
   cursor: pointer;
   user-select: none;
+  transition: 300ms;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+
   @media (max-width: 1440px) {
     width: 250px;
     font-size: 19px;
