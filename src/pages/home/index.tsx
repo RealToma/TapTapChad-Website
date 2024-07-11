@@ -3,11 +3,11 @@ import styled from "styled-components";
 import BorderSection from "../../components/border/borderSection";
 import Hero from "./01Hero";
 import TapTapChad from "./04TapTapChad";
-import Gallery from "./06Press";
 import Tokenomics from "./05Tokenomics";
 import Contact from "./07Contact";
 import MemeToken from "./02MemeToken";
 import Booster from "./03Booster";
+import Press from "./06Press";
 
 const Home = () => {
   return (
@@ -17,14 +17,8 @@ const Home = () => {
       <MemeToken />
       <Booster />
       <TapTapChad />
-      <Tokenomics /> 
-      {/* <BorderSection /> */}
-      {/* <BorderSection /> */}
-      {/* <TapTapChad />
-      <BorderSection />
-      <Gallery />
-      <BorderSection />
-      <Tokenomics /> */}
+      <Tokenomics />
+      <Press />
       <BorderSection />
       <Contact />
     </StyledComponent>

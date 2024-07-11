@@ -88,6 +88,9 @@ const StyledComponent = styled(Box)`
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
+  position: fixed;
+  background-color: white;
+  z-index: 1000;
 
   padding: 30px 200px;
   box-sizing: border-box;
@@ -101,7 +104,7 @@ const StyledComponent = styled(Box)`
     padding: 20px 30px;
   }
   @media (max-width: 600px) {
-    padding: 20px 20px;
+    padding: 10px 20px;
   }
 `;
 

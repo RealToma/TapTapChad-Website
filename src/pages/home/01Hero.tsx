@@ -47,6 +47,7 @@ const StyledComponent = styled(Box)`
   position: relative;
   align-items: center;
   width: 100%;
+  margin-top: 120px;
   padding: 150px 200px;
   box-sizing: border-box;
   @media (max-width: 1440px) {
@@ -59,11 +60,10 @@ const StyledComponent = styled(Box)`
     padding: 80px 50px;
   }
   @media (max-width: 768px) {
-    margin-top: 30px;
     padding: 0px 30px;
+    margin-top: 120px;
   }
   @media (max-width: 600px) {
-    margin-top: 20px;
     padding: 0px 20px;
   }
 
