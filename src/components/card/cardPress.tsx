@@ -20,6 +20,7 @@ const StyledComponent = styled(Box)`
 
   margin-right: 20px;
 
+  cursor: pointer;
   @media (max-width: 1024px) {
     border-radius: 12px;
   }

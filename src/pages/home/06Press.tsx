@@ -87,20 +87,6 @@ const CustomMarquee = styled(Marquee)`
     .rfm-overlay {
       --gradient-width: 20px !important;
   }
-
-  /* @media (max-width: 768px) {
-    height: 250px;
-    .rfm-overlay {
-      --gradient-width: 50px !important;
-    }
-  }
-
-  @media (max-width: 430px) {
-    height: 200px;
-    .rfm-overlay {
-      --gradient-width: 30px !important;
-    }
-  } */
 `;
 
 export default Press;
