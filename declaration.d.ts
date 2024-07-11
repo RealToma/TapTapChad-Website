@@ -5,6 +5,7 @@ declare module "react-apexcharts";
 declare module "axios";
 declare module "react-router-dom";
 declare module "react-fast-marquee";
+declare module "scroll-lock";
 declare module "react-notifications" {
   import { ReactNode } from "react";
   import { EventEmitter } from "events";

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { dataMenuLink } from "../../data/links";
 import { SocialIconGroup } from "../icons/socialIconGroup";
 import Slide from "@mui/material/Slide";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const Header = () => {
   const [clickedLink, setClickedLink] = useState(0);
@@ -31,7 +32,16 @@ const Header = () => {
         })}
       </SectionLinks>
       <ButtonBuyChad>BUY $CHAD</ButtonBuyChad>
-      <ButtonMobileMenu onClick={() => setIsMobile(!isMobile)}>
+      <ButtonMobileMenu
+        onClick={() => {
+          setIsMobile(!isMobile);
+          if (isMobile) {
+            enablePageScroll();
+          } else {
+            disablePageScroll();
+          }
+        }}
+      >
         <LineTop active={isMobile ? 1 : 0} />
         <LineMiddle active={isMobile ? 1 : 0} />
         <LineBogtom active={isMobile ? 1 : 0} />
@@ -54,6 +64,7 @@ const Header = () => {
                   style={{ textDecoration: "none" }}
                   onClick={() => {
                     setIsMobile(false);
+                    enablePageScroll();
                   }}
                 >
                   <LinkMobile>{each.name}</LinkMobile>
@@ -185,7 +196,7 @@ const LinkEach = styled(Box)`
     margin: 0px 15px;
     font-size: 17px;
   }
-  
+
   @media (max-width: 1280px) {
     margin: 0px 12px;
     font-size: 16px;
@@ -197,9 +208,7 @@ const ButtonMobileMenu = styled(Box)`
   @media (max-width: 900px) {
     display: flex;
   }
-  position: fixed;
-  top: 30px;
-  right: 50px;
+  /* position: fixed; */
   z-index: 10000;
 
   width: 36px;
@@ -208,10 +217,6 @@ const ButtonMobileMenu = styled(Box)`
   user-select: none;
   flex-direction: column;
   justify-content: space-between;
-
-  @media (max-width: 600px) {
-    right: 30px;
-  }
 `;
 
 const LineTop = styled(Box)`

@@ -1,50 +1,16 @@
 import { Box } from "@mui/material";
 import styled from "styled-components";
 import Chart from "react-apexcharts";
+import { CustomTextHead01 } from "../../components/text/textHead";
+import { CustomTextBody01 } from "../../components/text/textBody";
 
 const dataChartTokenomics = {
-  series: [
-    {
-      data: [
-        {
-          x: "Community and Airdrops",
-          y: 40,
-        },
-        {
-          x: "Social Media Airdrops",
-          y: 15,
-        },
-        {
-          x: "Team",
-          y: 5,
-        },
-        {
-          x: "Marketing",
-          y: 5,
-        },
-        {
-          x: "Reserve",
-          y: 10,
-        },
-        {
-          x: "Liquidity Pool",
-          y: 25,
-        },
-      ],
-    },
-  ],
+  series: [35, 25, 15, 25],
   options: {
     legend: {
       show: false,
     },
-    chart: {
-      height: 350,
-      type: "treemap",
-      toolbar: {
-        show: false,
-      },
-    },
-
+    labels: ["Presale", "Liquidity", "Marketing", "Development and Staking"],
     dataLabels: {
       enabled: true,
       dropShadow: {
@@ -55,10 +21,10 @@ const dataChartTokenomics = {
       },
       style: {
         fontSize: window.innerWidth < 600 ? "12px" : "16px",
-        fontStyle: "Belleza",
+        fontStyle: "Karma",
       },
       formatter: function (val: any, opt: any) {
-        return [val, opt.value + "%"];
+        return [val + "%"];
       },
     },
     stroke: {
@@ -70,7 +36,7 @@ const dataChartTokenomics = {
     tooltip: {
       style: {
         fontSize: "14px",
-        fontStyle: "Belleza",
+        fontStyle: "Karma",
       },
       y: {
         formatter: function (val: any) {
@@ -106,15 +72,23 @@ const dataChartTokenomics = {
 const Tokenomics = () => {
   return (
     <StyledComponent id="tokenomics">
-      <TextHead>Tokenomics</TextHead>
       <SectionChart>
         <Chart
           options={dataChartTokenomics.options}
           series={dataChartTokenomics?.series}
           // height={300}
-          type="treemap"
+          type="pie"
         />
       </SectionChart>
+      <SectionTokenomics>
+        <CustomTextHead01 text="CHADS tokens" color={"black"} />
+        <SectionContractAddress>
+          <CustomTextBody01 text="CONTACT ADDRESS" color={"black"} />
+          <SectionCopyAddress>
+            
+          </SectionCopyAddress>
+        </SectionContractAddress>
+      </SectionTokenomics>
     </StyledComponent>
   );
 };
@@ -122,60 +96,74 @@ const Tokenomics = () => {
 const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
-  flex-direction: column;
+  background-color: #f3f3f3;
 
-
-  padding: 0px 200px;
+  padding: 80px 200px;
   box-sizing: border-box;
   @media (max-width: 1440px) {
-    padding: 0px 150px;
+    padding: 60px 150px;
   }
   @media (max-width: 1280px) {
-    padding: 0px 50px;
+    padding: 50px 50px;
   }
   @media (max-width: 1024px) {
-    padding: 0px 50px;
+    padding: 40px 50px;
   }
   @media (max-width: 768px) {
-    padding: 0px 30px;
+    padding: 30px 30px;
+    flex-direction: column;
   }
   @media (max-width: 600px) {
-    padding: 0px 20px;
+    padding: 20px 20px;
   }
 `;
-
-const TextHead = styled(Box)`
-  font-family: Belleza;
-  color: white;
-  font-size: 60px;
-  @media (max-width: 1024px) {
-    font-size: 50px;
-  }
-  @media (max-width: 768px) {
-    font-size: 40px;
-  }
-  @media (max-width: 600px) {
-    font-size: 30px;
-  }
-`;
-
 const SectionChart = styled(Box)`
   display: flex;
-  width: 100%;
+  width: 600px;
   justify-content: center;
-  margin-top: 50px;
+  margin-right: 50px;
   > div {
-    width: 60%;
+    width: 100%;
   }
-  @media (max-width: 1024px) {
-    margin-top: 30px;
-    > div {
-      width: 100%;
-    }
+  @media (max-width: 1440px) {
+    margin-right: 40px;
+    width: 500px;
+  }
+  @media (max-width: 1280px) {
+    width: 400px;
+    margin-right: 30px;
   }
   @media (max-width: 768px) {
-    margin-top: 10px;
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 30px;
   }
+`;
+
+const SectionTokenomics = styled(Box)`
+  display: flex;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+`;
+
+const SectionContractAddress = styled(Box)`
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+`;
+
+const SectionCopyAddress = styled(Box)`
+  width: 100%;
+  height: 55px;
+  border-radius: 5px;
+  background: #000;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  box-sizing: border-box;
 `;
 
 export default Tokenomics;

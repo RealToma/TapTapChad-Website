@@ -22,28 +22,27 @@ const StyledComponent = styled(Box)`
   width: 100%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 50px;
-
   margin-bottom: 130px;
 
-  padding: 0px 200px;
+  padding: 20px 200px;
   box-sizing: border-box;
   @media (max-width: 1440px) {
-    padding: 0px 150px;
+    padding: 20px 150px;
   }
   @media (max-width: 1280px) {
-    padding: 0px 50px;
+    padding: 20px 50px;
   }
   @media (max-width: 1024px) {
-    padding: 0px 50px;
+    padding: 20px 50px;
     grid-column-gap: 30px;
   }
   @media (max-width: 768px) {
-    padding: 0px 30px;
+    padding: 20px 30px;
     margin-bottom: 100px;
     grid-column-gap: 15px;
   }
   @media (max-width: 600px) {
-    padding: 0px 20px;
+    padding: 10px 20px;
     margin-bottom: 20px;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 15px;

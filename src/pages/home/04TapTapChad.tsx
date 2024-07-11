@@ -76,6 +76,9 @@ const SectionLeft = styled(Box)`
   width: 40%;
   flex-direction: column;
   justify-content: flex-start;
+  @media (max-width: 1440px) {
+    width: 45%;
+  }
   @media (max-width: 1280px) {
     width: 50%;
   }
@@ -88,17 +91,18 @@ const SectionRight = styled(Box)`
   display: flex;
   position: absolute;
   width: 100%;
-  right: 5%;
+  right: 10%;
   bottom: 0px;
   width: 800px;
   @media (max-width: 1620px) {
     width: 700px;
   }
   @media (max-width: 1440px) {
+    right: 7%;
     width: 600px;
   }
   @media (max-width: 1280px) {
-    right: -20px;
+    right: 0%;
   }
   @media (max-width: 1024px) {
     width: 500px;

@@ -18,7 +18,7 @@ const TapTapChad = () => {
       />
       <SectionSubmit>
         <SectionInput>
-          <InputEmail component={"input"} placeHolder="Entry Your Email" />
+          <InputEmail component={"input"} placeholder="Entry Your Email" />
         </SectionInput>
         <ButtonSubmit>Submit</ButtonSubmit>
       </SectionSubmit>

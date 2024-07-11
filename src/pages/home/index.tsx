@@ -17,7 +17,8 @@ const Home = () => {
       <MemeToken />
       <Booster />
       <TapTapChad />
-      <BorderSection />
+      <Tokenomics /> 
+      {/* <BorderSection /> */}
       {/* <BorderSection /> */}
       {/* <TapTapChad />
       <BorderSection />
