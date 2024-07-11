@@ -7,6 +7,8 @@ import { HiClipboard, HiClipboardCheck } from "react-icons/hi";
 import { useState } from "react";
 import copy from "copy-to-clipboard";
 import { addressChadToken } from "../../data/config";
+import { dataTokenomics } from "../../data/token";
+import { shortAddress } from "../../libs/functions";
 
 const dataChartTokenomics = {
   series: [35, 25, 15, 25],
@@ -94,12 +96,12 @@ const Tokenomics = () => {
           type="pie"
         />
       </SectionChart>
-      <SectionTokenomics>
+      <SectionTokenDetails>
         <CustomTextHead01 text="CHADS tokens" color={"black"} />
         <SectionContractAddress>
           <CustomTextBody01 text="CONTACT ADDRESS" color={"black"} />
           <SectionCopyAddress>
-            <TextAddress>{addressChadToken}</TextAddress>
+            <TextAddress>{shortAddress(addressChadToken)}</TextAddress>
             <ButtonCopy
               onClick={() => {
                 handleCopyAddress();
@@ -108,8 +110,32 @@ const Tokenomics = () => {
               {!flagCopiedAddress ? <HiClipboard /> : <HiClipboardCheck />}
             </ButtonCopy>
           </SectionCopyAddress>
+          <SectionTokenomics>
+            <TableHead>
+              <RowNo>No</RowNo>
+              <RowTopic>Topic</RowTopic>
+              <RowPercentage justifyContent="center">Percentage</RowPercentage>
+              <RowTokens justifyContent="flex-end">Tokens</RowTokens>
+            </TableHead>
+            <TableBody>
+              {dataTokenomics?.map((each: any, index: any) => {
+                return (
+                  <TableHead key={index}>
+                    <RowNo>{index + 1}</RowNo>
+                    <RowTopic>{each.name}</RowTopic>
+                    <RowPercentage justifyContent="center">
+                      {each.percentage}%
+                    </RowPercentage>
+                    <RowTokens justifyContent="flex-end">
+                      {each.amount}
+                    </RowTokens>
+                  </TableHead>
+                );
+              })}
+            </TableBody>
+          </SectionTokenomics>
         </SectionContractAddress>
-      </SectionTokenomics>
+      </SectionTokenDetails>
     </StyledComponent>
   );
 };
@@ -118,6 +144,7 @@ const StyledComponent = styled(Box)`
   display: flex;
   width: 100%;
   background-color: #f3f3f3;
+  align-items: center;
 
   padding: 80px 200px;
   box-sizing: border-box;
@@ -130,9 +157,11 @@ const StyledComponent = styled(Box)`
   @media (max-width: 1024px) {
     padding: 40px 50px;
   }
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+  }
   @media (max-width: 768px) {
     padding: 30px 30px;
-    flex-direction: column;
   }
   @media (max-width: 600px) {
     padding: 20px 20px;
@@ -142,7 +171,6 @@ const SectionChart = styled(Box)`
   display: flex;
   width: 600px;
   justify-content: center;
-  margin-right: 50px;
   > div {
     width: 100%;
   }
@@ -154,14 +182,14 @@ const SectionChart = styled(Box)`
     width: 400px;
     margin-right: 30px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    margin-top: 30px;
     width: 100%;
     margin-right: 0px;
-    margin-top: 30px;
   }
 `;
 
-const SectionTokenomics = styled(Box)`
+const SectionTokenDetails = styled(Box)`
   display: flex;
   flex: 1;
   width: 100%;
@@ -173,11 +201,15 @@ const SectionContractAddress = styled(Box)`
   flex-direction: column;
   margin-top: 30px;
   width: 100%;
+
+  @media (max-width: 1440px) {
+    margin-top: 15px;
+  }
 `;
 
 const SectionCopyAddress = styled(Box)`
   display: flex;
-  width: 70%;
+  width: 100%;
   height: 55px;
   border-radius: 5px;
   background: #000;
@@ -186,6 +218,14 @@ const SectionCopyAddress = styled(Box)`
   justify-content: space-between;
   padding: 0px 20px;
   box-sizing: border-box;
+  @media (max-width: 1440px) {
+    padding: 0px 15px;
+    height: 50px;
+  }
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+    height: 40px;
+  }
 `;
 
 const TextAddress = styled(Box)`
@@ -197,6 +237,17 @@ const TextAddress = styled(Box)`
   font-style: normal;
   font-weight: 500;
   text-transform: capitalize;
+
+  margin-right: 20px;
+  @media (max-width: 1440px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+  @media (max-width: 350px) {
+    font-size: 12px;
+  }
 `;
 
 const ButtonCopy = styled(Box)`
@@ -210,6 +261,86 @@ const ButtonCopy = styled(Box)`
   &:hover {
     color: #838383;
   }
+  @media (max-width: 1440px) {
+    font-size: 22px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+`;
+
+const SectionTokenomics = styled(Box)`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 30px;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
+`;
+
+const TableHead = styled(Box)`
+  display: flex;
+  align-items: center;
+  color: #000;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  font-family: Karma;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  margin-bottom: 12px;
+
+  @media (max-width: 1650px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 10px 10px;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+  @media (max-width: 350px) {
+    font-size: 10px;
+    padding: 10px 5px;
+  }
+`;
+
+const RowNo = styled(Box)`
+  display: flex;
+  flex: 1;
+`;
+
+const RowTopic = styled(Box)`
+  display: flex;
+  flex: 6;
+`;
+
+const RowPercentage = styled(Box)`
+  display: flex;
+  flex: 3;
+`;
+
+const RowTokens = styled(Box)`
+  display: flex;
+  flex: 3;
+`;
+
+const TableBody = styled(Box)`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 `;
 
 export default Tokenomics;
